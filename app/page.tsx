@@ -1,69 +1,322 @@
-import Image from "next/image";
+const categories = [
+  { name: "Music", icon: "♫", color: "#ffe4e1" },
+  { name: "Sports", icon: "◉", color: "#e4f7e8" },
+  { name: "Theatre", icon: "✦", color: "#eee5ff" },
+  { name: "Comedy", icon: "☺", color: "#fff0d8" },
+  { name: "Festivals", icon: "✹", color: "#ffe5df" },
+  { name: "Food", icon: "♨", color: "#e4f4ef" },
+  { name: "Travel", icon: "✈", color: "#e5efff" },
+  { name: "Workshops", icon: "◇", color: "#eee9ff" },
+  { name: "Nightlife", icon: "◇", color: "#ffe5ef" },
+  { name: "More", icon: "•••", color: "#eeeeee" },
+];
+
+const explore = [
+  {
+    title: "Live Music in Mumbai",
+    image:
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Weekend Escapes",
+    image:
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Best Comedy Shows",
+    image:
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Food Experiences",
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Art & Culture",
+    image:
+      "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Sports & Adventures",
+    image:
+      "https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=900&q=80",
+  },
+];
+
+const events = [
+  {
+    category: "Music",
+    title: "Arijit Singh Live in Mumbai",
+    location: "Jio World Garden, Mumbai",
+    date: "Sat, 24 May 2025",
+    time: "7:00 PM",
+    price: "₹2,499",
+    image:
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    category: "Sports",
+    title: "Mumbai Indians vs CSK",
+    location: "Wankhede Stadium, Mumbai",
+    date: "Mon, 12 May 2025",
+    time: "7:30 PM",
+    price: "₹1,499",
+    image:
+      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    category: "Theatre",
+    title: "The Great Indian Musical",
+    location: "Nehru Centre, Mumbai",
+    date: "Sun, 25 May 2025",
+    time: "6:30 PM",
+    price: "₹999",
+    image:
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    category: "Festival",
+    title: "Holi Fest 2025",
+    location: "Jio World Garden, Mumbai",
+    date: "Fri, 14 Mar 2025",
+    time: "10:00 AM",
+    price: "₹1,999",
+    image:
+      "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    category: "Food",
+    title: "Bandra Food Trail",
+    location: "Bandra, Mumbai",
+    date: "Sat, 17 May 2025",
+    time: "4:00 PM",
+    price: "₹1,999",
+    image:
+      "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    category: "Travel",
+    title: "Elephanta Caves Day Trip",
+    location: "Gateway of India, Mumbai",
+    date: "Sun, 18 May 2025",
+    time: "8:00 AM",
+    price: "₹1,899",
+    image:
+      "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=900&q=80",
+  },
+];
+
+const stories = [
+  {
+    title: "5 Hidden Beaches Near Mumbai You Need to Visit",
+    author: "Rhea Sharma",
+    time: "2 min read",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "The Best Street Food Trail in Mumbai",
+    author: "Karan Mehta",
+    time: "3 min read",
+    image:
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Trekking to Rajmachi Fort — A Perfect Weekend Getaway",
+    author: "Neha Kapoor",
+    time: "4 min read",
+    image:
+      "https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "My First Concert Experience in Mumbai",
+    author: "Arjun Nair",
+    time: "3 min read",
+    image:
+      "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1200&q=80",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      {/* NAVIGATION */}
+      <header className="navbar">
+        <div className="logo">
+          Let&apos;s <span>Share</span>
+          <i>✦</i>
+        </div>
+
+        <nav>
+          <a className="active">Discover</a>
+          <a>Events</a>
+          <a>Places</a>
+          <a>Experiences</a>
+          <a>Community</a>
+          <a>More⌄</a>
+        </nav>
+
+        <div className="nav-actions">
+          <button className="location">⌖ Mumbai⌄</button>
+          <button className="profile">◯</button>
+          <button className="menu">☰</button>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-overlay" />
+
+        <div className="hero-content">
+          <p className="eyebrow">LIVE. EXPLORE. SHARE.</p>
+
+          <h1>
+            Discover places.
+            <br />
+            Share experiences.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="hero-subtitle">
+            Find events, places to explore, and experiences worth sharing.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+
+          <div className="search-box">
+            <span className="search-icon">⌕</span>
+
+            <input
+              type="text"
+              placeholder="Search events, places, experiences, artists, or cities..."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <div className="search-location">⌖ Mumbai⌄</div>
+
+            <button className="search-button">⌕</button>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CATEGORIES */}
+      <section className="category-section">
+        <div className="category-row">
+          {categories.map((category) => (
+            <button className="category" key={category.name}>
+              <span
+                className="category-icon"
+                style={{ backgroundColor: category.color }}
+              >
+                {category.icon}
+              </span>
+              <span>{category.name}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* EXPLORE */}
+      <section className="section">
+        <div className="section-heading">
+          <h2>Explore what&apos;s happening</h2>
+          <a>View all →</a>
+        </div>
+
+        <div className="explore-grid">
+          {explore.map((item) => (
+            <article className="explore-card" key={item.title}>
+              <img src={item.image} alt={item.title} />
+              <div className="explore-title">
+                {item.title} <span>→</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* TRENDING EVENTS */}
+      <section className="section">
+        <div className="section-heading">
+          <h2>Trending in Mumbai</h2>
+          <a>View all →</a>
+        </div>
+
+        <div className="event-grid">
+          {events.map((event) => (
+            <article className="event-card" key={event.title}>
+              <div className="event-image">
+                <img src={event.image} alt={event.title} />
+
+                <span className="event-category">
+                  {event.category}
+                </span>
+
+                <button className="heart">♡</button>
+              </div>
+
+              <div className="event-info">
+                <h3>{event.title}</h3>
+
+                <p className="event-location">
+                  ⌖ {event.location}
+                </p>
+
+                <p className="event-date">
+                  ▣ {event.date} &nbsp; · &nbsp; {event.time}
+                </p>
+
+                <p className="event-price">
+                  From <strong>{event.price}</strong>
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* COMMUNITY */}
+      <section className="section community-section">
+        <div className="section-heading">
+          <h2>Stories from the community</h2>
+          <a>View all →</a>
+        </div>
+
+        <div className="stories-grid">
+          {stories.map((story) => (
+            <article className="story-card" key={story.title}>
+              <img src={story.image} alt={story.title} />
+
+              <div className="story-overlay">
+                <h3>{story.title}</h3>
+                <p>
+                  By {story.author} &nbsp; · &nbsp; {story.time}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer>
+        <div className="footer-logo">
+          Let&apos;s <span>Share</span>
+        </div>
+
+        <p>
+          Discover places. Share experiences.
+        </p>
+
+        <div className="footer-links">
+          <a>About</a>
+          <a>Events</a>
+          <a>Places</a>
+          <a>Community</a>
+          <a>Contact</a>
+        </div>
+
+        <div className="copyright">
+          © 2026 Let&apos;s Share. Built as an MVP.
+        </div>
+      </footer>
+    </main>
   );
 }
