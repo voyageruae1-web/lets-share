@@ -1,14 +1,18 @@
+import Link from "next/link";
+
 const categories = [
-  { name: "Music", icon: "♫", color: "#ffe4e1" },
-  { name: "Sports", icon: "◉", color: "#e4f7e8" },
-  { name: "Theatre", icon: "✦", color: "#eee5ff" },
-  { name: "Comedy", icon: "☺", color: "#fff0d8" },
-  { name: "Festivals", icon: "✹", color: "#ffe5df" },
-  { name: "Food", icon: "♨", color: "#e4f4ef" },
-  { name: "Travel", icon: "✈", color: "#e5efff" },
-  { name: "Workshops", icon: "◇", color: "#eee9ff" },
-  { name: "Nightlife", icon: "◇", color: "#ffe5ef" },
-  { name: "More", icon: "•••", color: "#eeeeee" },
+  { name: "Music", icon: "♫", color: "#ffe4e1", href: "#" },
+  { name: "Sports", icon: "◉", color: "#e4f7e8", href: "#" },
+  { name: "Theatre", icon: "✦", color: "#eee5ff", href: "#" },
+  { name: "Comedy", icon: "☺", color: "#fff0d8", href: "#" },
+  { name: "Festivals", icon: "✹", color: "#ffe5df", href: "#" },
+  { name: "Food", icon: "♨", color: "#e4f4ef", href: "#" },
+  { name: "Travel", icon: "✈", color: "#e5efff", href: "#" },
+  { name: "Workshops", icon: "◇", color: "#eee9ff", href: "#" },
+  { name: "Nightlife", icon: "☾", color: "#ffe5ef", href: "#" },
+  { name: "Finance", icon: "◎", color: "#eee9d8", href: "/finance" },
+  { name: "World Packing", icon: "◉", color: "#e6f0f5", href: "#" },
+  { name: "Activities", icon: "△", color: "#f0e9ff", href: "#" },
 ];
 
 const explore = [
@@ -141,7 +145,6 @@ const stories = [
 export default function Home() {
   return (
     <main>
-      {/* NAVIGATION */}
       <header className="navbar">
         <div className="logo">
           Let&apos;s <span>Share</span>
@@ -164,7 +167,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="hero">
         <div className="hero-overlay" />
 
@@ -200,15 +202,20 @@ export default function Home() {
       <section className="category-section">
         <div className="category-row">
           {categories.map((category) => (
-            <button className="category" key={category.name}>
+            <Link
+              href={category.href}
+              className="category"
+              key={category.name}
+            >
               <span
                 className="category-icon"
                 style={{ backgroundColor: category.color }}
               >
                 {category.icon}
               </span>
+
               <span>{category.name}</span>
-            </button>
+            </Link>
           ))}
         </div>
       </section>
@@ -224,6 +231,7 @@ export default function Home() {
           {explore.map((item) => (
             <article className="explore-card" key={item.title}>
               <img src={item.image} alt={item.title} />
+
               <div className="explore-title">
                 {item.title} <span>→</span>
               </div>
@@ -286,6 +294,7 @@ export default function Home() {
 
               <div className="story-overlay">
                 <h3>{story.title}</h3>
+
                 <p>
                   By {story.author} &nbsp; · &nbsp; {story.time}
                 </p>
@@ -301,9 +310,7 @@ export default function Home() {
           Let&apos;s <span>Share</span>
         </div>
 
-        <p>
-          Discover places. Share experiences.
-        </p>
+        <p>Discover places. Share experiences.</p>
 
         <div className="footer-links">
           <a>About</a>

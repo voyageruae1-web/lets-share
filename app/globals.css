@@ -599,3 +599,286 @@ footer > p {
     font-size: 25px;
   }
 }
+/* =========================================================
+   FINANCE PAGE
+   ========================================================= */
+
+.finance-page {
+  min-height: 100vh;
+  background: #fffdf9;
+}
+
+.finance-hero {
+  min-height: 310px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.finance-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 249, 238, 0.97) 0%,
+    rgba(255, 249, 238, 0.9) 35%,
+    rgba(255, 249, 238, 0.38) 68%,
+    rgba(255, 249, 238, 0.08) 100%
+  );
+}
+
+.finance-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 45px 5%;
+}
+
+.back-link {
+  display: inline-block;
+  color: #656b70;
+  font-size: 13px;
+  margin-bottom: 25px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #f15b45;
+}
+
+.finance-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: -2px;
+  color: #17202a;
+}
+
+.finance-hero p {
+  max-width: 520px;
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555d64;
+}
+
+/* FINANCE CREATORS */
+
+.finance-creators {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 48px 5% 80px;
+}
+
+.finance-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e8e5df;
+}
+
+.finance-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #17202a;
+}
+
+.finance-heading p {
+  margin-top: 8px;
+  color: #8a9197;
+  font-size: 14px;
+}
+
+.back-category-button {
+  border: 1px solid #f4a18f;
+  color: #f15b45;
+  padding: 11px 18px;
+  border-radius: 24px;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.back-category-button:hover {
+  background: #f15b45;
+  color: white;
+}
+
+/* CREATOR GRID */
+
+.creator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.creator-card {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 325px;
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 14px;
+  padding: 14px;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.creator-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.creator-image-wrapper {
+  min-height: 295px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eee;
+}
+
+.creator-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.creator-card:hover .creator-image {
+  transform: scale(1.04);
+}
+
+.creator-content {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.creator-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  line-height: 1.1;
+  color: #17202a;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+  color: #515960;
+  font-size: 13px;
+}
+
+.instagram-link:hover {
+  color: #f15b45;
+}
+
+.instagram-icon {
+  width: 19px;
+  height: 19px;
+  border: 2px solid #f15b45;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #f15b45;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.creator-content p {
+  margin-top: 20px;
+  color: #737b82;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+.profile-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  border: 1px solid #f58e78;
+  color: #f15b45;
+  border-radius: 22px;
+  padding: 10px 17px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.profile-button:hover {
+  background: #f15b45;
+  color: white;
+}
+
+.profile-button span {
+  font-size: 16px;
+}
+
+/* FINANCE RESPONSIVE */
+
+@media (max-width: 900px) {
+  .creator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .finance-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .finance-hero {
+    min-height: 390px;
+  }
+
+  .finance-hero-content {
+    padding: 40px 20px;
+  }
+
+  .finance-hero h1 {
+    font-size: 52px;
+  }
+
+  .finance-hero p {
+    font-size: 15px;
+  }
+
+  .finance-creators {
+    padding: 38px 18px 60px;
+  }
+
+  .finance-heading h2 {
+    font-size: 27px;
+  }
+
+  .creator-card {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-image-wrapper {
+    min-height: 280px;
+  }
+
+  .creator-content {
+    padding: 22px 10px 15px;
+  }
+
+  .profile-button {
+    margin-top: 22px;
+  }
+}
