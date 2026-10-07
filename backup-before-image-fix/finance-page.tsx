@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const creators = [
   {
@@ -6,7 +6,7 @@ const creators = [
     handle: "@travelingtoretirement",
     instagram: "https://www.instagram.com/travelingtoretirement/",
     image:
-      "/images/image-3.jpg",
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85",
     description:
       "Travel, retirement planning, lifestyle and practical financial inspiration for building a life with more freedom.",
   },
@@ -15,7 +15,7 @@ const creators = [
     handle: "@aakanksha.monga",
     instagram: "https://www.instagram.com/aakanksha.monga/?hl=en",
     image:
-      "/images/image-11.jpg",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85",
     description:
       "Travel creator sharing experiences, destinations, personal finance perspectives and ideas for exploring the world.",
   },
@@ -37,22 +37,22 @@ export default function FinancePage() {
             <Link href="/">Places</Link>
             <Link href="/">Experiences</Link>
             <Link href="/">Community</Link>
-            <Link href="/">MoreâŒ„</Link>
+            <Link href="/">More⌄</Link>
           </div>
 
           <div className="nav-actions">
             <button className="location-button" type="button">
-              <span>â—</span>
+              <span>●</span>
               Mumbai
-              <span>âŒ„</span>
+              <span>⌄</span>
             </button>
 
             <button className="profile-button-nav" type="button">
-              â™™
+              ♙
             </button>
 
             <button className="menu-button" type="button">
-              â˜°
+              ☰
             </button>
           </div>
         </div>
@@ -64,10 +64,10 @@ export default function FinancePage() {
 
         <div className="finance-hero-content">
           <Link href="/" className="back-link">
-            â† Back to Explore
+            ← Back to Explore
           </Link>
 
-          <p className="finance-eyebrow">LET&apos;S SHARE â€¢ CATEGORY</p>
+          <p className="finance-eyebrow">LET&apos;S SHARE • CATEGORY</p>
 
           <h1>Finance</h1>
 
@@ -91,7 +91,7 @@ export default function FinancePage() {
           </div>
 
           <Link href="/" className="back-category-button">
-            â† Back to Categories
+            ← Back to Categories
           </Link>
         </div>
 
@@ -117,7 +117,7 @@ export default function FinancePage() {
                   rel="noopener noreferrer"
                   className="instagram-link"
                 >
-                  <span className="instagram-icon">â—Ž</span>
+                  <span className="instagram-icon">◎</span>
                   {creator.handle}
                 </a>
 
@@ -132,7 +132,7 @@ export default function FinancePage() {
                   className="profile-button"
                 >
                   View Profile
-                  <span>â†—</span>
+                  <span>↗</span>
                 </a>
               </div>
             </article>
@@ -161,23 +161,10 @@ export default function FinancePage() {
           </div>
 
           <div className="footer-copy">
-            Â© 2026 Let&apos;s Share
+            © 2026 Let&apos;s Share
           </div>
         </div>
       </footer>
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

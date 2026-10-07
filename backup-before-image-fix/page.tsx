@@ -1,75 +1,75 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const categories = [
   {
     name: "Music",
-    icon: "â™«",
+    icon: "♫",
     color: "#ffe4e1",
     href: "#",
   },
   {
     name: "Sports",
-    icon: "â—‰",
+    icon: "◉",
     color: "#e4f7e8",
     href: "#",
   },
   {
     name: "Theatre",
-    icon: "âœ¦",
+    icon: "✦",
     color: "#eee5ff",
     href: "#",
   },
   {
     name: "Comedy",
-    icon: "â˜º",
+    icon: "☺",
     color: "#fff0d8",
     href: "#",
   },
   {
     name: "Festivals",
-    icon: "âœ¹",
+    icon: "✹",
     color: "#ffe5df",
     href: "#",
   },
   {
     name: "Food",
-    icon: "â™¨",
+    icon: "♨",
     color: "#e4f4ef",
     href: "#",
   },
   {
     name: "Travel",
-    icon: "âœˆ",
+    icon: "✈",
     color: "#e5efff",
     href: "#",
   },
   {
     name: "Workshops",
-    icon: "â—‡",
+    icon: "◇",
     color: "#eee9ff",
     href: "#",
   },
   {
     name: "Nightlife",
-    icon: "â˜¾",
+    icon: "☾",
     color: "#ffe5ef",
     href: "#",
   },
   {
     name: "Finance",
-    icon: "â—Ž",
+    icon: "◎",
     color: "#eee9d8",
     href: "/finance",
   },
   {
     name: "World Packing",
-    icon: "â—‰",
+    icon: "◉",
     color: "#e6f0f5",
     href: "#",
   },
   {
     name: "Activities",
-    icon: "â–³",
+    icon: "△",
     color: "#f0e9ff",
     href: "/activities",
   },
@@ -78,39 +78,39 @@ const categories = [
 const explore = [
   {
     title: "Live Music in Mumbai",
-    subtitle: "Concerts Â· Music",
+    subtitle: "Concerts · Music",
     image:
-      "/images/image-6.jpg",
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "Weekend Escapes",
-    subtitle: "Travel Â· Getaways",
+    subtitle: "Travel · Getaways",
     image:
-      "/images/image-2.jpg",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "Best Comedy Shows",
-    subtitle: "Comedy Â· Stand-up",
+    subtitle: "Comedy · Stand-up",
     image:
-      "/images/image-14.jpg",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "Food Experiences",
-    subtitle: "Food Â· Experiences",
+    subtitle: "Food · Experiences",
     image:
-      "/images/image-8.jpg",
+      "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "Art & Culture",
-    subtitle: "Art Â· Culture",
+    subtitle: "Art · Culture",
     image:
-      "/images/image-13.jpg",
+      "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "Sports & Adventures",
-    subtitle: "Sports Â· Outdoors",
+    subtitle: "Sports · Outdoors",
     image:
-      "/images/image-1.jpg",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=80",
   },
 ];
 
@@ -166,7 +166,7 @@ const stories = [
     category: "Travel",
   },
   {
-    title: "5 hidden cafÃ©s you need to try",
+    title: "5 hidden cafés you need to try",
     author: "Aman Mehta",
     category: "Food",
   },
@@ -192,7 +192,7 @@ export default function HomePage() {
         <div className="navbar-inner">
           <Link href="/" className="logo">
             Let&apos;s Share
-            <span className="logo-mark">âœ¦</span>
+            <span className="logo-mark">✦</span>
           </Link>
 
           <div className="nav-links">
@@ -208,14 +208,14 @@ export default function HomePage() {
 
             <Link href="#community">Community</Link>
 
-            <Link href="#more">MoreâŒ„</Link>
+            <Link href="#more">More⌄</Link>
           </div>
 
           <div className="nav-actions">
             <button className="location-button" type="button">
-              <span>âŒ–</span>
+              <span>⌖</span>
               Mumbai
-              <span>âŒ„</span>
+              <span>⌄</span>
             </button>
 
             <button
@@ -223,7 +223,7 @@ export default function HomePage() {
               type="button"
               aria-label="Profile"
             >
-              â—‹
+              ○
             </button>
 
             <button
@@ -231,7 +231,7 @@ export default function HomePage() {
               type="button"
               aria-label="Menu"
             >
-              â˜°
+              ☰
             </button>
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function HomePage() {
           </p>
 
           <div className="search-box">
-            <span className="search-icon">âŒ•</span>
+            <span className="search-icon">⌕</span>
 
             <input
               type="text"
@@ -269,7 +269,7 @@ export default function HomePage() {
             />
 
             <div className="search-location">
-              âŒ– MumbaiâŒ„
+              ⌖ Mumbai⌄
             </div>
 
             <button
@@ -277,7 +277,7 @@ export default function HomePage() {
               type="button"
               aria-label="Search"
             >
-              âŒ•
+              ⌕
             </button>
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
           </div>
 
           <Link href="#explore" className="view-all">
-            View all â†’
+            View all →
           </Link>
         </div>
 
@@ -370,7 +370,7 @@ export default function HomePage() {
           </div>
 
           <Link href="#events" className="view-all">
-            See all events â†’
+            See all events →
           </Link>
         </div>
 
@@ -394,7 +394,7 @@ export default function HomePage() {
               </div>
 
               <span className="event-arrow">
-                â†’
+                →
               </span>
             </article>
           ))}
@@ -418,7 +418,7 @@ export default function HomePage() {
           </div>
 
           <Link href="#community" className="view-all">
-            Explore community â†’
+            Explore community →
           </Link>
         </div>
 
@@ -444,7 +444,7 @@ export default function HomePage() {
               </div>
 
               <span className="story-arrow">
-                â†—
+                ↗
               </span>
             </article>
           ))}
@@ -462,7 +462,7 @@ export default function HomePage() {
               className="logo footer-logo"
             >
               Let&apos;s Share
-              <span className="logo-mark">âœ¦</span>
+              <span className="logo-mark">✦</span>
             </Link>
 
             <p className="footer-description">
@@ -480,23 +480,10 @@ export default function HomePage() {
           </div>
 
           <div className="footer-copy">
-            Â© 2026 Let&apos;s Share
+            © 2026 Let&apos;s Share
           </div>
         </div>
       </footer>
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

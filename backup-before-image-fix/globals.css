@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -118,7 +119,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("/images/image-10.jpg");
+  background-image: url("https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=2000&q=85");
   background-size: cover;
   background-position: center;
 }
@@ -613,7 +614,7 @@ footer > p {
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-image: url("/images/image-5.jpg");
+  background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
   background-size: cover;
   background-position: center;
 }
@@ -897,7 +898,7 @@ footer > p {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url("/images/image-4.jpg");
+  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85");
   background-size: cover;
   background-position: center;
 }
@@ -995,7 +996,7 @@ footer > p {
       rgba(30, 30, 30, 0.72),
       rgba(30, 30, 30, 0.25)
     ),
-    url("/images/image-12.jpg");
+    url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1200&q=80");
   background-size: cover;
   background-position: center;
 }
@@ -1007,7 +1008,7 @@ footer > p {
       rgba(20, 20, 20, 0.72),
       rgba(20, 20, 20, 0.25)
     ),
-    url("/images/image-9.jpg");
+    url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80");
   background-size: cover;
   background-position: center;
 }
@@ -1141,7 +1142,7 @@ footer > p {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url("/images/image-7.jpg");
+  background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1800&q=85");
   background-size: cover;
   background-position: center;
 }
@@ -1896,16 +1897,3 @@ footer > p {
     min-height: 260px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
